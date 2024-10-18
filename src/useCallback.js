@@ -25,6 +25,8 @@ const CallBack=()=>{
     Guru.add(third)
     console.log(Guru)
     return <div>
+        <h3>Hooks</h3>
+
         <h3>{one}</h3>
         <h3>{two}</h3>
         <h3>{three}</h3>
