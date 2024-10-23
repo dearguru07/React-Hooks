@@ -4,6 +4,8 @@ import CallBack from "./useCallback";
 // import EffectHookss from "./useEffect"
 import HookEffect from "./useEffect";
 import Context from "./context";
+import { useRef } from "react";
+
 
 // const App = () => {
 //   const [a,seta]=useState(15)
@@ -15,10 +17,34 @@ import Context from "./context";
 //   </div>;
 // };
 
+const AppLay=()=>{
+  const personName=useRef()
+  const personEmail=useRef()
+  const personPassword=useRef()
+  
+  // function data(){
+  //   console.log(personName.current.value)
+  //   console.log(personEmail.current.value)
+  //   console.log(personPassword.current.value)
+  // }
+
+  return <div>
+    <input placeholder="name.." type="text" ref={personName}></input>
+    <input placeholder="email.." type="email" ref={personEmail}></input>
+    <input placeholder="password.." type="password" ref={personPassword}></input>
+    <button onClick={()=>{
+      console.log(personName.current.value)
+      console.log(personEmail.current.value)
+      console.log(personPassword.current.value)
+    }}>Click Here</button>
+  </div>
+}
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<App />);
 // root.render(<HookEffect/>);
-root.render(<Context/>);
+root.render(<AppLay/>);
 // root.render(<CallBack />);
 
 
