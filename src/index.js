@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import CallBack from "./useCallback";
 // import EffectHookss from "./useEffect"
@@ -21,22 +21,19 @@ const AppLay=()=>{
   const personName=useRef()
   const personEmail=useRef()
   const personPassword=useRef()
-  
-  // function data(){
-  //   console.log(personName.current.value)
-  //   console.log(personEmail.current.value)
-  //   console.log(personPassword.current.value)
-  // }
+
+  function data(){
+    console.log(personName.current.value)
+    console.log(personEmail.current.value)
+    console.log(personPassword.current.value)
+  }
 
   return <div>
     <input placeholder="name.." type="text" ref={personName}></input>
     <input placeholder="email.." type="email" ref={personEmail}></input>
     <input placeholder="password.." type="password" ref={personPassword}></input>
-    <button onClick={()=>{
-      console.log(personName.current.value)
-      console.log(personEmail.current.value)
-      console.log(personPassword.current.value)
-    }}>Click Here</button>
+    <button onClick={data}>Click Here</button>
+    <h3>HELOO</h3>
   </div>
 }
 
