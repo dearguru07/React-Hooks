@@ -3,19 +3,22 @@ import ReactDOM from "react-dom/client";
 import CallBack from "./useCallback";
 // import EffectHookss from "./useEffect"
 import HookEffect from "./useEffect";
+import Context from "./context";
 
-const App = () => {
-  const [a,seta]=useState(15)
-  return <div>
-      <h3>{a}</h3>
-      <button onClick={()=>{
-        seta(10)
-      }}>click here</button>
-  </div>;
-};
+// const App = () => {
+//   const [a,seta]=useState(15)
+//   return <div>
+//       <h3>{a}</h3>
+//       <button onClick={()=>{
+//         seta(10)
+//       }}>click here</button>
+//   </div>;
+// };
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<App />);
-root.render(<HookEffect/>);
+// root.render(<HookEffect/>);
+root.render(<Context/>);
 // root.render(<CallBack />);
 
 
